@@ -1,0 +1,190 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="#ffffff"
+    tools:context="com.uvstudio.him.noteproject.DrawFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_gravity="center"
+        android:layout_height="match_parent">
+
+        <com.uvstudio.him.noteproject.CustomView
+            android:id="@+id/customView"
+            android:layout_width="match_parent"
+            android:layout_height="380dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="68dp"
+            android:background="#ffffff"
+            android:elevation="20dp">
+
+        </com.uvstudio.him.noteproject.CustomView>
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/saveOnDraw"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/save"
+            android:layout_width="50dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_weight=".25"
+            android:layout_height="50dp" />
+
+        <Button
+            android:id="@+id/strokesize"
+            android:background="@drawable/strokesize"
+            android:layout_width="50dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_weight=".25"
+            android:layout_height="50dp"
+            android:text="S" />
+        <Button
+            android:id="@+id/color"
+            android:background="@drawable/picker"
+            android:layout_width="50dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_weight=".25"
+            android:layout_height="50dp"
+            android:text="C" />
+        <Button
+            android:id="@+id/eraser"
+            android:background="@drawable/clear"
+            android:layout_width="50dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_weight=".25"
+            android:layout_height="50dp"
+            android:text="E" />
+    </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/drawHide"
+        android:background="@drawable/backfrag"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:visibility="visible"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/disStroke"
+            android:text="STROKE WIDTH"
+            android:textSize="20sp"
+            android:textColor="#fff"
+            android:textAlignment="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:layout_below="@+id/disStroke"
+            android:id="@+id/strokeselect"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:weightSum="100"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/StrokeOne"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/stroke"
+                android:layout_width="5dp"
+                android:layout_marginLeft="30dp"
+                android:layout_height="5dp" />
+            <ImageButton
+                android:id="@+id/StrokeTwo"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/stroke"
+                android:layout_width="10dp"
+                android:layout_marginLeft="30dp"
+                android:layout_height="10dp" />
+            <ImageButton
+                android:id="@+id/StrokeThree"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/stroke"
+                android:layout_width="15dp"
+                android:layout_marginLeft="30dp"
+                android:layout_height="15dp" />
+            <ImageButton
+                android:id="@+id/Strokefour"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/stroke"
+                android:layout_width="20dp"
+                android:layout_marginLeft="30dp"
+                android:layout_height="20dp" />
+            <ImageButton
+                android:id="@+id/Strokefive"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/stroke"
+                android:layout_width="25dp"
+                android:layout_marginLeft="30dp"
+                android:layout_height="25dp" />
+            <ImageButton
+                android:id="@+id/Strokesix"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/stroke"
+                android:layout_width="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_height="30dp" />
+        </LinearLayout>
+        <TextView
+            android:layout_below="@+id/strokeselect"
+            android:id="@+id/colorpicker"
+            android:text="COLOR PICKER"
+            android:layout_marginTop="20dp"
+            android:textAlignment="center"
+            android:textColor="#fff"
+            android:textSize="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:id="@+id/colorviewer"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_width="300dp"
+            android:layout_height="250dp" />
+        <LinearLayout
+            android:id="@+id/redpicker"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/colordisplay"
+            android:background="@drawable/colordisplay"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+        </LinearLayout>
+
+        <Button
+            android:text="select"
+            android:id="@+id/okcolor"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+
+</FrameLayout>

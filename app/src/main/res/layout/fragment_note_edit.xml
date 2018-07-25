@@ -1,0 +1,159 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true"
+    android:background="#ffffff"
+    android:id="@+id/noteeditlayout"
+    tools:context="com.uvstudio.him.noteproject.NoteEditFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/titleEditText"
+            android:layout_width="400dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:textSize="20sp"
+            android:inputType="textPersonName"
+            android:hint="Title"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <EditText
+            android:id="@+id/infoEditText"
+            android:layout_width="400dp"
+            android:layout_height="250dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textSize="15sp"
+            android:inputType="textImeMultiLine"
+            android:hint="Note goes here..."
+            android:gravity="top"
+            android:scrollbars="vertical"
+            android:minLines="2"
+            android:maxLines="10"
+            android:layout_below="@+id/titleEditText"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <SeekBar
+            android:id="@+id/seekBar"
+            style="@style/Widget.AppCompat.SeekBar.Discrete"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_below="@+id/infoEditText"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:max="10"
+            android:thumb="@drawable/slider_top"
+            android:thumbTint="#ff3700"
+            android:progress="5" />
+
+        <Button
+            android:id="@+id/saveButton"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Save" />
+
+        <TextView
+            android:id="@+id/lowText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Low"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_below="@+id/seekBar"
+            android:layout_alignLeft="@+id/seekBar"
+            android:layout_alignStart="@+id/seekBar" />
+
+        <TextView
+            android:id="@+id/mediumText"
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Medium"
+            android:layout_alignBaseline="@+id/lowText"
+            android:layout_alignBottom="@+id/lowText"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:id="@+id/highText"
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="High"
+            android:layout_alignBaseline="@+id/mediumText"
+            android:layout_alignBottom="@+id/mediumText"
+            android:layout_alignRight="@+id/seekBar"
+            android:layout_alignEnd="@+id/seekBar" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/hideview"
+        android:visibility="visible"
+        android:fitsSystemWindows="true"
+        android:background="@drawable/backfrag"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.skyfishjy.library.RippleBackground
+            android:id="@+id/ripple_effect"
+            app:rb_color="#de7143"
+            app:rb_radius="20dp"
+            app:rb_rippleAmount="4"
+            app:rb_duration="3000"
+            app:rb_scale="4"
+            app:rb_strokeWidth="10dp"
+            android:layout_width="150dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_height="150dp">
+            <Button
+                android:id="@+id/savepdf"
+                android:layout_width="70dp"
+                android:background="@drawable/savepdf"
+                android:foreground="?attr/selectableItemBackground"
+                android:textSize="20sp"
+                android:layout_height="70dp"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true" />
+    </com.skyfishjy.library.RippleBackground>
+        <com.skyfishjy.library.RippleBackground
+            android:id="@+id/ripple_effect_2"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:rb_color="#359c75"
+            app:rb_radius="20dp"
+            app:rb_rippleAmount="4"
+            app:rb_duration="3000"
+            app:rb_scale="4"
+            app:rb_strokeWidth="20dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="60dp"
+            android:layout_toRightOf="@+id/ripple_effect">
+            <Button
+                android:id="@+id/savedatabase"
+                android:background="@drawable/sava_database"
+                android:layout_centerHorizontal="true"
+                android:textSize="20sp"
+                android:layout_centerVertical="true"
+                android:layout_width="70dp"
+                android:layout_height="70dp" />
+        </com.skyfishjy.library.RippleBackground>
+    </RelativeLayout>
+</FrameLayout>

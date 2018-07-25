@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/first"
+        android:enabled="true"
+        android:icon="@drawable/one"
+        app:showAsAction="ifRoom"
+        android:title="Notes"
+        />
+
+    <item
+        android:id="@+id/three"
+        android:enabled="true"
+        android:icon="@drawable/three"
+        app:showAsAction="ifRoom"
+        android:title="Draw"
+        />
+
+
+</menu>

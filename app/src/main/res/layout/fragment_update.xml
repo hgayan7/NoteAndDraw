@@ -1,0 +1,124 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="50dp"
+    tools:context="com.uvstudio.him.noteproject.NoteEditFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/titleEditText"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:textSize="20sp"
+            android:inputType="textPersonName"
+            android:hint="Title"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <EditText
+            android:id="@+id/infoEditText"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:ems="10"
+            android:textSize="15sp"
+            android:inputType="textPersonName"
+            android:hint="Note goes here..."
+            android:gravity="top"
+            android:layout_below="@+id/titleEditText"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <SeekBar
+            android:id="@+id/seekBar"
+            style="@style/Widget.AppCompat.SeekBar.Discrete"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_below="@+id/infoEditText"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:max="10"
+            android:thumb="@drawable/slider_top"
+            android:thumbTint="#ff3700"
+            android:progress="5" />
+
+        <Button
+            android:id="@+id/editButton"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:text="Edit"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="40dp"
+            android:layout_marginBottom="10dp"
+            />
+        <Button
+            android:id="@+id/updateButton"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:text="Update"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+
+            />
+        <TextView
+            android:id="@+id/lowText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Low"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_below="@+id/seekBar"
+            android:layout_alignLeft="@+id/seekBar"
+            android:layout_alignStart="@+id/seekBar" />
+
+        <TextView
+            android:id="@+id/mediumText"
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Medium"
+            android:layout_alignBaseline="@+id/lowText"
+            android:layout_alignBottom="@+id/lowText"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:id="@+id/highText"
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="High"
+            android:layout_alignBaseline="@+id/mediumText"
+            android:layout_alignBottom="@+id/mediumText"
+            android:layout_alignRight="@+id/seekBar"
+            android:layout_alignEnd="@+id/seekBar" />
+
+        <Button
+            android:id="@+id/speak"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignEnd="@+id/titleEditText"
+            android:layout_alignRight="@+id/titleEditText"
+            android:layout_alignTop="@+id/titleEditText"
+            android:background="@drawable/play"
+             />
+    </RelativeLayout>
+</FrameLayout>

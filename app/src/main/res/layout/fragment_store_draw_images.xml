@@ -1,0 +1,33 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.uvstudio.him.noteproject.StoreDrawImages_frag">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/saveRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <RelativeLayout
+        android:id="@+id/animlayout"
+        android:visibility="invisible"
+        android:background="@drawable/backfrag"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/focusimg"
+            android:src="@drawable/image"
+            android:layout_centerVertical="true"
+            android:scaleType="fitXY"
+            android:layout_width="match_parent"
+            android:layout_height="400dp" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
