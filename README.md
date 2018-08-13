@@ -1,10 +1,11 @@
 # NoteAndDraw - Android app 
 ### Features:
-> Save notes
-
-> Draw on board
-
-> Draw on images 
+* Save notes
+--------------
+* Draw on board
+--------------
+* Draw on images 
+--------------
 ### Screenshots:
 > ![screenshot_1](https://user-images.githubusercontent.com/29502161/43189484-4ed907f6-9014-11e8-980d-236bd5dfa77a.png)
   
